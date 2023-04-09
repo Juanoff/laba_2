@@ -6,11 +6,10 @@ import javax.swing.JLabel;
 import ru.common.model.transport.Transport;
 
 public class TransportLabel extends JLabel {
-
+    private static final int WIDTH = 80;
+    private static final int HEIGHT = 80;
     public TransportLabel(Transport transport) {
         super();
-        int WIDTH = 80;
-        int HEIGHT = 80;
         Image image = transport.getImage()
             .getScaledInstance(WIDTH, HEIGHT, Image.SCALE_AREA_AVERAGING);
         setIcon(new ImageIcon(image));
